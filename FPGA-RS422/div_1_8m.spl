@@ -1,0 +1,9 @@
+[Inputs]
+clk59m
+rst
+[Outputs]
+clk1_8m
+[BiDir]
+[ATTRIBUTES]
+VeriModel div_1_8m
+

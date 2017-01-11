@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+div_baud instance_name (
+    .clk1_8m(clk1_8m), 
+    .clk_baud(clk_baud), 
+    .rst(rst)
+    );
+
+

@@ -1,0 +1,8 @@
+verilog work "uart_send.v"
+verilog work "uart_receive.v"
+verilog work "SETDATAuart_send.v"
+verilog work "div_baud.v"
+verilog work "div_1_8m.v"
+verilog work "top.v"
+verilog work "test_top.v"
+verilog work "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

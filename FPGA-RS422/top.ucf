@@ -1,0 +1,18 @@
+
+
+NET "dout[7]" LOC = M7;
+NET "dout[6]" LOC = N7;
+NET "dout[5]" LOC = R7;
+NET "dout[4]" LOC = AD6;
+NET "clk59m" LOC = C14;
+NET "rst" LOC = Y6;
+NET "rxd" LOC = AE5;
+NET "txd" LOC = AF4;
+
+
+NET "rst" IOSTANDARD = LVCMOS25;
+
+# PlanAhead Generated IO constraints 
+
+NET "rxd" IOSTANDARD = LVCMOS25;
+NET "send_over" IOSTANDARD = LVCMOS25;

@@ -1,0 +1,28 @@
+Command line:
+   test_uart_receive_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54504
+
+Thu Nov 24 21:10:56 2016
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 847.286 Meg
+
+ Total Signals          : 28
+ Total Nets             : 40
+ Total Signal Drivers   : 18
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 35
+ Total Traceable Variables  : 60
+ Total Scalar Nets and Variables : 286
+
+ Total Simulation Time: 0.109375 sec
+
+ Current Memory Usage: 847.286 Meg
+
+Thu Nov 24 21:11:08 2016
+

@@ -1,0 +1,5 @@
+set -tmpdir "D:/workspace/RS_422/xst/projnav.tmp"
+set -xsthdpdir "D:/workspace/RS_422/xst"
+elaborate
+-ifn uart_send.prj
+-ifmt mixed

@@ -1,0 +1,3 @@
+verilog work "uart_send.v"
+verilog work "uart_receive.v"
+verilog work "uart.v"

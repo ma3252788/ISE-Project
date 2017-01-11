@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+SETDATAuart_send instance_name (
+    .clk_sample(clk_sample), 
+    .rst(rst), 
+    .wrn(wrn), 
+    .rdn(rdn), 
+    .data_ready(data_ready)
+    );
+
+

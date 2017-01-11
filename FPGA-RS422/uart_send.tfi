@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+uart_send instance_name (
+    .clk_sample(clk_sample), 
+    .clk_baud(clk_baud), 
+    .rst(rst), 
+    .txd(txd), 
+    .din(din), 
+    .wrn(wrn), 
+    .send_over(send_over)
+    );
+
+

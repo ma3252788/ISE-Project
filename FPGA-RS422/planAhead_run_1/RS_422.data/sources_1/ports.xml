@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="dout">
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Port Id="rst" Dir="IN"/>
+		<Port Id="rxd" Dir="IN"/>
+		<Port Id="clk59m" Dir="IN"/>
+		<Port Id="data_ready" Dir="OUT"/>
+		<Port Id="txd" Dir="OUT"/>
+		<Port Id="send_over" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

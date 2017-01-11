@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map P.40xd on Wed Jan 11 17:28:16 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk59m" LOCATE = SITE "C14" LEVEL 1;
+COMP "dout<4>" LOCATE = SITE "AD6" LEVEL 1;
+COMP "dout<5>" LOCATE = SITE "R7" LEVEL 1;
+COMP "dout<6>" LOCATE = SITE "N7" LEVEL 1;
+COMP "dout<7>" LOCATE = SITE "M7" LEVEL 1;
+COMP "rxd" LOCATE = SITE "AE5" LEVEL 1;
+COMP "rst" LOCATE = SITE "Y6" LEVEL 1;
+COMP "txd" LOCATE = SITE "AF4" LEVEL 1;
+NET "clk59m_BUFGP/IBUFG" BEL "clk59m_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

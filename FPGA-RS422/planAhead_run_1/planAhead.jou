@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Mon Nov 21 18:44:06 2016
+# Process ID: 1288
+# Log file: D:/workspace/RS_422/planAhead_run_1/planAhead.log
+# Journal file: D:/workspace/RS_422/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/workspace/RS_422/pa.fromNetlist.tcl
+startgroup
+set_property package_pin M7 [get_ports {dout[7]}]
+endgroup
+startgroup
+set_property package_pin N7 [get_ports {dout[6]}]
+endgroup
+startgroup
+set_property package_pin R7 [get_ports {dout[5]}]
+endgroup
+startgroup
+set_property package_pin AD6 [get_ports {dout[4]}]
+endgroup
+startgroup
+set_property package_pin C14 [get_ports clk59m]
+endgroup
+startgroup
+set_property package_pin AC6 [get_ports rst]
+endgroup
+set_property package_pin "" [get_ports [list  rxd]]
+startgroup
+set_property package_pin AE5 [get_ports rxd]
+endgroup
+startgroup
+set_property package_pin AF4 [get_ports txd]
+endgroup
+set_property package_pin "" [get_ports [list  send_over]]
+save_constraints

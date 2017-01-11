@@ -1,0 +1,8 @@
+verilog work "uart_send.v"
+verilog work "uart_receive.v"
+verilog work "uart.v"
+verilog work "div_baud.v"
+verilog work "div_1_8m.v"
+verilog work "top.v"
+verilog work "test.v"
+verilog work "E:/Hardware/ISE14.3/14.3/ISE_DS/ISE//verilog/src/glbl.v"

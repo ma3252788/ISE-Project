@@ -1,0 +1,14 @@
+
+
+
+// Instantiate the module
+uart_receive instance_name (
+    .clk_sample(clk_sample), 
+    .rst(rst), 
+    .rxd(rxd), 
+    .dout(dout), 
+    .rdn(rdn), 
+    .data_ready(data_ready)
+    );
+
+

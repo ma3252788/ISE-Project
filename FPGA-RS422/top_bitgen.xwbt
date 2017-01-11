@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Hardware\ISE\Project\FPGA-RS422\top.ncd
+OUTFILE=E:\Hardware\ISE\Project\FPGA-RS422\top.bit
+FAMILY=Spartan3
+PART=xc3s2000-5fg676
+WORKINGDIR=E:\Hardware\ISE\Project\FPGA-RS422
+LICENSE=ISE
+USER_INFO=__0_0_0

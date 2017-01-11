@@ -1,0 +1,30 @@
+Running: E:\Hardware\ISE14.3\14.3\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/Hardware/ISE/Project/RS_422/test_isim_beh.exe -prj E:/Hardware/ISE/Project/RS_422/test_beh.prj work.test work.glbl 
+ISim P.40xd (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Hardware/ISE/Project/RS_422/uart_send.v" into library work
+Analyzing Verilog file "E:/Hardware/ISE/Project/RS_422/uart_receive.v" into library work
+Analyzing Verilog file "E:/Hardware/ISE/Project/RS_422/uart.v" into library work
+Analyzing Verilog file "E:/Hardware/ISE/Project/RS_422/div_baud.v" into library work
+Analyzing Verilog file "E:/Hardware/ISE/Project/RS_422/div_1_8m.v" into library work
+Analyzing Verilog file "E:/Hardware/ISE/Project/RS_422/top.v" into library work
+Analyzing Verilog file "E:/Hardware/ISE/Project/RS_422/test.v" into library work
+Analyzing Verilog file "E:/Hardware/ISE14.3/14.3/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "E:/Hardware/ISE/Project/RS_422/test.v" Line 37: Port dout is not connected to this instance
+Completed static elaboration
+Compiling module div_1_8m
+Compiling module div_baud
+Compiling module uart_send
+Compiling module uart_receive
+Compiling module uart
+Compiling module top
+Compiling module test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable E:/Hardware/ISE/Project/RS_422/test_isim_beh.exe
+Fuse Memory Usage: 28036 KB
+Fuse CPU Usage: 436 ms

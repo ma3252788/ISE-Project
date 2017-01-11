@@ -1,0 +1,14 @@
+
+
+
+// Instantiate the module
+control_ram instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .data_ready(data_ready), 
+    .dina(dina), 
+    .douta(douta), 
+    .rdn(rdn)
+    );
+
+

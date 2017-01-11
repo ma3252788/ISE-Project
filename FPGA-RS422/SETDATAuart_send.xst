@@ -1,0 +1,5 @@
+set -tmpdir "E:/Hardware/ISE/Project/RS_422/xst/projnav.tmp"
+set -xsthdpdir "E:/Hardware/ISE/Project/RS_422/xst"
+elaborate
+-ifn SETDATAuart_send.prj
+-ifmt mixed

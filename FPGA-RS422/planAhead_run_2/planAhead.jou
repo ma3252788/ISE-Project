@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Fri Nov 25 10:03:33 2016
+# Process ID: 12012
+# Log file: D:/workspace/RS_422/planAhead_run_2/planAhead.log
+# Journal file: D:/workspace/RS_422/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/workspace/RS_422/pa.fromNetlist.tcl
+startgroup
+set_property package_pin Y6 [get_ports rst]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list rst]]
+save_constraints
