@@ -1,0 +1,5 @@
+set -tmpdir "E:/Hardware/ISE-Project/UART/xst/projnav.tmp"
+set -xsthdpdir "E:/Hardware/ISE-Project/UART/xst"
+elaborate
+-ifn bps_generate.prj
+-ifmt mixed

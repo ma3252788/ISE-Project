@@ -21,8 +21,96 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="UART.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bps_generate.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bps_generate.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="bps_generate.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="rx.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="rx.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="rx.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tx.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="tx.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="tx.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="uart.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="uart.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="uart.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="uart.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="uart.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="uart.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="uart.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="uart.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="uart.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="uart_envsettings.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="uart_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="uart_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="uart_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1484188803" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1484188803">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1484188803" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6353938896372257493" xil_pn:start_ts="1484188803">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1484188803" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="1946985116863969837" xil_pn:start_ts="1484188803">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1484188803" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1484188803">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1484188803" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-6218114229159172493" xil_pn:start_ts="1484188803">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1484188803" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="7127834657212947039" xil_pn:start_ts="1484188803">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1484188803" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="2753026020024355063" xil_pn:start_ts="1484188803">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1484213290" xil_pn:in_ck="-2115863142865715727" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="-775934707270888787" xil_pn:start_ts="1484213278">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="uart.lso"/>
+      <outfile xil_pn:name="uart.ngc"/>
+      <outfile xil_pn:name="uart.ngr"/>
+      <outfile xil_pn:name="uart.prj"/>
+      <outfile xil_pn:name="uart.stx"/>
+      <outfile xil_pn:name="uart.syr"/>
+      <outfile xil_pn:name="uart.xst"/>
+      <outfile xil_pn:name="uart_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1484213459" xil_pn:in_ck="5116231006824" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="123229027436215454" xil_pn:start_ts="1484213459">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1484213481" xil_pn:in_ck="8356286781038483850" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8374624121990957493" xil_pn:start_ts="1484213475">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="uart.bld"/>
+      <outfile xil_pn:name="uart_ngdbuild.xrpt"/>
+    </transform>
+  </transforms>
 
 </generated_project>

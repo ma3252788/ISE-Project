@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-01-11T22:44:35</DateModified>
+  <DateModified>2017-01-12T22:47:28</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>2017-01-11T22:18:11</SummaryTimeStamp>
   <SavedFilePath>E:/Hardware/ISE-Project/FPGA-RS422/iseconfig/top.xreport</SavedFilePath>

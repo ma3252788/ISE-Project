@@ -1,0 +1,4 @@
+MO bps_generate NULL bps_generate.v vlg37/bps__generate.bin 1484213284
+MO rx NULL rx.v vlg32/rx.bin 1484213284
+MO tx NULL tx.v vlg3C/tx.bin 1484213284
+MO uart NULL uart.v vlg48/uart.bin 1484213284

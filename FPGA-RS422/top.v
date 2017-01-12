@@ -46,6 +46,7 @@ div_baud div_baud1 (
 								 .clk_baud(clk_baud), 
 								 .rst(rst)
 								 );
+
 //由于每有数据产生，所以手动编写数据
 wire wrn;
 wire rdn;
