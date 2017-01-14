@@ -9,7 +9,7 @@ Target Device  : xc3s2000
 Target Package : fg676
 Target Speed   : -5
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Wed Jan 11 17:28:15 2017
+Mapped Date    : Fri Jan 13 11:13:23 2017
 
 Design Summary
 --------------
@@ -36,7 +36,7 @@ Logic Distribution:
 Average Fanout of Non-Clock Nets:                3.62
 
 Peak Memory Usage:  256 MB
-Total REAL time to MAP completion:  1 secs 
+Total REAL time to MAP completion:  4 secs 
 Total CPU time to MAP completion:   1 secs 
 
 NOTES:

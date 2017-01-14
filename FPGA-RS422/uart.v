@@ -30,7 +30,7 @@ input wrn;
 
 output txd;
 output [7:0] dout;
-output data_ready;
+output data_ready;//当移位寄存器积满8个之后，data_ready就会输出一个高电平，说明数据准备好了，这时开始读dout
 output send_over;
 
 uart_send uart_senduu(

@@ -5,7 +5,7 @@ Command Line:
 E:\Hardware\ISE14.3\14.3\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -intstyle
 ise -dd _ngo -nt timestamp -uc top.ucf -p xc3s2000-fg676-5 top.ngc top.ngd
 
-Reading NGO file "E:/Hardware/ISE/Project/RS_422/top.ngc" ...
+Reading NGO file "E:/Hardware/ISE-Project/FPGA-RS422/top.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -27,10 +27,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 150272 kilobytes
+Total memory usage is 151232 kilobytes
 
 Writing NGD file "top.ngd" ...
-Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   2 sec
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   3 sec
 
 Writing NGDBUILD log file "top.bld"...

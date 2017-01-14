@@ -22,7 +22,7 @@ reg	[3:0]sendbit_cnt;	//数据发送位数计数器
 reg	shift_en;			//移位寄存器使能
 reg	shift_over;			//数据发送完成标志位
 reg	[7:0]shift_reg;	//移位寄存器
-reg	[7:0]data_reg;		//输入数据存储
+reg	[7:0]data_reg;		//输入数据存储，相当于一个复制，当shift_reg积累8个之后，就把值赋给data_reg
 
 reg	[4:0]dlycnt;		//全为1时延时结束
 
@@ -37,15 +37,15 @@ parameter	SEND				=	5'b00100;//发送
 parameter	DELAY				=	5'b01000;//发送完成后延时一段时间。
 parameter	FINISH			=	5'b10000;//完成
 
-always @(posedge clk_sample or negedge rst)
+always @(posedge clk_sample or negedge rst)//rst是异步复位，平时都是高电平
 begin
-	if(!rst)
+	if(!rst)//如果按下复位键，则置1
 		begin
 			wrn1 <= 1'b1;
 			wrn2 <= 1'b1;
 		end
-	else
-		begin
+	else//否则的话，
+		begin   
 			wrn1 <= wrn;
 			wrn2 <= wrn1;
 		end
@@ -63,7 +63,7 @@ begin
 			STATE <= IDLE;
 		end
 	else
-		begin
+		begin//状态机，是一种编程结构
 			case(STATE)
 			IDLE:
 				begin
@@ -102,7 +102,7 @@ begin
 				end
 			DELAY:
 				begin
-					if(&dlycnt)
+					if(&dlycnt)//按位与
 						begin
 							STATE <= FINISH;
 						end
@@ -144,10 +144,10 @@ begin
 						end 
 					else if(sendbit_cnt == 4'b0001)
 						begin
-							txd <= 1'b0;
+							txd <= 1'b0;//这是一个开始信号，拉低电平，说明开始传输数据了
 							sendbit_cnt <= sendbit_cnt + 1;
 						end
-					else if(sendbit_cnt >= 4'b0010 && sendbit_cnt <= 4'b1001)
+					else if(sendbit_cnt >= 4'b0010 && sendbit_cnt <= 4'b1001)//这就是移位的过程
 						begin
 							//MSB First
 							//shift_reg[7:1] <= shift_reg[6:0] ;
@@ -161,7 +161,7 @@ begin
 							txd <= shift_reg[0] ;
 							sendbit_cnt <= sendbit_cnt + 1;
 						end
-					else if(sendbit_cnt == 4'b1010)
+					else if(sendbit_cnt == 4'b1010)//发送完成
 						begin
 							txd <= 1'b1;
 							shift_over <= 1'b1;
