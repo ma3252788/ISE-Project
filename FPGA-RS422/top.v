@@ -26,7 +26,7 @@ input rxd;
 
 output txd;
 output send_over;
-output dout;
+output[7:0] dout;
 
 wire txd;
 wire rxd;
@@ -53,7 +53,30 @@ wire rdn;
 wire send_over;
 wire data_ready;
 wire [7:0] dout;
-wire [11:0] addra_cnt;
+
+reg [0:3] cnt;
+
+assign rdn = 1'b0;
+assign wrn = data_ready;
+
+uart uart1 (
+			 .clk(clk1_8m), 
+			 .clk_baud(clk_baud), 
+			 .rst(rst), 
+			 .rxd(rxd), 
+			 .din(dout), 
+			 .wrn(wrn), 
+			 .txd(txd), 
+			 .rdn(rdn), 
+			 .dout(dout), 
+			 .data_ready(data_ready), 
+			 .send_over(send_over)
+			 );
+
+
+
+
+/*wire [11:0] addra_cnt;
 wire [7:0] douta;
 
 
@@ -73,6 +96,6 @@ uart uart1 (
     .data_ready(data_ready), 
     .send_over(send_over)
     );
-
+*/
 
 endmodule

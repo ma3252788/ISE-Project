@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.40 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.40 secs
  
 --> Reading design: top.prj
 
@@ -269,7 +269,6 @@ INFO:Xst:1799 - State 0010000 is never reached in FSM <STATE>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 1-bit register for signal <data_ready>.
-    Found 8-bit tristate buffer for signal <dout>.
     Found 1-bit register for signal <clk_baud_en>.
     Found 4-bit up counter for signal <clkdiv>.
     Found 8-bit register for signal <data_reg>.
@@ -287,7 +286,6 @@ INFO:Xst:1799 - State 0010000 is never reached in FSM <STATE>.
 	inferred  25 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   2 Comparator(s).
-	inferred   8 Tristate(s).
 Unit <uart_receive> synthesized.
 
 
@@ -298,12 +296,7 @@ Unit <uart> synthesized.
 
 Synthesizing Unit <top>.
     Related source file is "top.v".
-WARNING:Xst:653 - Signal <wrn> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:653 - Signal <rdn> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:1780 - Signal <douta> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <din> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-WARNING:Xst:646 - Signal <data_ready> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <addra_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <top> synthesized.
 
 
@@ -324,8 +317,6 @@ Macro Statistics
  12-bit comparator less                                : 2
  4-bit comparator greatequal                           : 2
  4-bit comparator lessequal                            : 2
-# Tristates                                            : 1
- 8-bit tristate buffer                                 : 1
 
 =========================================================================
 
@@ -356,22 +347,6 @@ Optimizing FSM <uart1/uart_senduu/STATE/FSM> on signal <STATE[1:3]> with gray en
  01000 | 010
  10000 | 110
 -------------------
-WARNING:Xst:1710 - FF/Latch <data_reg_0> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_reg_1> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_reg_2> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_reg_3> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_reg_4> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_reg_5> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_reg_6> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_reg_7> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <shift_reg_7> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <shift_reg_6> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <shift_reg_5> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <shift_reg_2> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <shift_reg_4> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <shift_reg_3> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <shift_reg_1> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <shift_reg_0> (without init value) has a constant value of 0 in block <uart_senduu>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -395,37 +370,12 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <data_reg_0> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_reg_1> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_reg_2> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_reg_3> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_reg_4> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_reg_5> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_reg_6> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_reg_7> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_7> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_6> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_5> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_2> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_4> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_3> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_1> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_0> (without init value) has a constant value of 0 in block <uart_send>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <top> ...
 
 Optimizing unit <uart_send> ...
 
 Optimizing unit <uart_receive> ...
-WARNING:Xst:2677 - Node <uart1/uart_receiveuu/STATE_FSM_FFd2> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <uart1/uart_receiveuu/STATE_FSM_FFd1> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <uart1/uart_receiveuu/STATE_FSM_FFd3> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <uart1/uart_receiveuu/dlycnt_4> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <uart1/uart_receiveuu/dlycnt_3> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <uart1/uart_receiveuu/dlycnt_2> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <uart1/uart_receiveuu/dlycnt_1> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <uart1/uart_receiveuu/dlycnt_0> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <uart1/uart_receiveuu/data_ready> of sequential type is unconnected in block <top>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -437,8 +387,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 62
- Flip-Flops                                            : 62
+# Registers                                            : 87
+ Flip-Flops                                            : 87
 
 =========================================================================
 
@@ -467,22 +417,23 @@ Design Statistics
 # IOs                              : 13
 
 Cell Usage :
-# BELS                             : 106
+# BELS                             : 164
 #      GND                         : 1
-#      INV                         : 3
-#      LUT2                        : 25
-#      LUT2_L                      : 1
-#      LUT3                        : 9
-#      LUT3_D                      : 3
+#      INV                         : 4
+#      LUT2                        : 24
+#      LUT2_D                      : 4
+#      LUT2_L                      : 3
+#      LUT3                        : 15
+#      LUT3_D                      : 1
 #      LUT3_L                      : 3
-#      LUT4                        : 31
-#      LUT4_D                      : 3
-#      LUT4_L                      : 2
+#      LUT4                        : 64
+#      LUT4_D                      : 6
+#      LUT4_L                      : 13
 #      MUXCY                       : 11
-#      MUXF5                       : 2
+#      MUXF5                       : 3
 #      XORCY                       : 12
-# FlipFlops/Latches                : 62
-#      FDC                         : 38
+# FlipFlops/Latches                : 87
+#      FDC                         : 63
 #      FDCE                        : 18
 #      FDE                         : 1
 #      FDP                         : 5
@@ -499,9 +450,9 @@ Device utilization summary:
 
 Selected Device : 3s2000fg676-5 
 
- Number of Slices:                       46  out of  20480     0%  
- Number of Slice Flip Flops:             62  out of  40960     0%  
- Number of 4 input LUTs:                 80  out of  40960     0%  
+ Number of Slices:                       74  out of  20480     0%  
+ Number of Slice Flip Flops:             87  out of  40960     0%  
+ Number of 4 input LUTs:                137  out of  40960     0%  
  Number of IOs:                          13
  Number of bonded IOBs:                  13  out of    489     2%  
  Number of GCLKs:                         3  out of      8    37%  
@@ -528,8 +479,8 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)                | Load  |
 -----------------------------------+--------------------------------------+-------+
 clk59m                             | BUFGP                                | 13    |
-div_1_8m1/clk_out1                 | BUFG                                 | 23    |
-div_baud1/clkdiv_3                 | NONE(uart1/uart_senduu/sendbit_cnt_3)| 6     |
+div_1_8m1/clk_out1                 | BUFG                                 | 40    |
+div_baud1/clkdiv_3                 | NONE(uart1/uart_senduu/sendbit_cnt_3)| 14    |
 uart1/uart_receiveuu/clkdiv_31     | BUFG                                 | 20    |
 -----------------------------------+--------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -539,7 +490,7 @@ Asynchronous Control Signals Information:
 -------------------------------------------------------------------------------------------+----------------------------------------+-------+
 Control Signal                                                                             | Buffer(FF name)                        | Load  |
 -------------------------------------------------------------------------------------------+----------------------------------------+-------+
-div_1_8m1/rst_inv(uart1/uart_senduu/STATE_FSM_Acst_FSM_inv1_INV_0:O)                       | NONE(div_1_8m1/clk_cnt_0)              | 57    |
+div_1_8m1/rst_inv(uart1/uart_senduu/STATE_FSM_Acst_FSM_inv1_INV_0:O)                       | NONE(div_1_8m1/clk_cnt_0)              | 82    |
 uart1/uart_receiveuu/rcvbit_cnt_not0001_inv(uart1/uart_receiveuu/rcvbit_cnt_not0001_inv1:O)| NONE(uart1/uart_receiveuu/rcvbit_cnt_0)| 4     |
 -------------------------------------------------------------------------------------------+----------------------------------------+-------+
 
@@ -547,9 +498,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.625ns (Maximum Frequency: 177.771MHz)
+   Minimum period: 5.690ns (Maximum Frequency: 175.762MHz)
    Minimum input arrival time before clock: 3.340ns
-   Maximum output required time after clock: 6.306ns
+   Maximum output required time after clock: 6.280ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -572,7 +523,7 @@ Delay:               5.482ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              1   0.626   0.976  div_1_8m1/clk_cnt_5 (div_1_8m1/clk_cnt_5)
-     LUT4_D:I0->O          6   0.479   0.876  div_1_8m1/clk_cnt_and0000_SW0 (N32)
+     LUT4_D:I0->O          6   0.479   0.876  div_1_8m1/clk_cnt_and0000_SW0 (N28)
      LUT4_D:I3->O          1   0.479   0.851  div_1_8m1/clk_cnt_and0000 (div_1_8m1/clk_cnt_and0000)
      LUT2:I1->O            0   0.479   0.000  div_1_8m1/Mcount_clk_cnt_lut<11> (div_1_8m1/Mcount_clk_cnt_lut<11>)
      XORCY:LI->O           1   0.541   0.000  div_1_8m1/Mcount_clk_cnt_xor<11> (div_1_8m1/Mcount_clk_cnt11)
@@ -583,51 +534,52 @@ Delay:               5.482ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'div_1_8m1/clk_out1'
-  Clock period: 5.625ns (frequency: 177.771MHz)
-  Total number of paths / destination ports: 150 / 22
+  Clock period: 4.952ns (frequency: 201.949MHz)
+  Total number of paths / destination ports: 270 / 40
 -------------------------------------------------------------------------
-Delay:               5.625ns (Levels of Logic = 4)
-  Source:            uart1/uart_senduu/dlycnt_4 (FF)
-  Destination:       uart1/uart_senduu/dlycnt_1 (FF)
+Delay:               4.952ns (Levels of Logic = 3)
+  Source:            uart1/uart_senduu/STATE_FSM_FFd3 (FF)
+  Destination:       uart1/uart_senduu/dlycnt_3 (FF)
   Source Clock:      div_1_8m1/clk_out1 rising
   Destination Clock: div_1_8m1/clk_out1 rising
 
-  Data Path: uart1/uart_senduu/dlycnt_4 to uart1/uart_senduu/dlycnt_1
+  Data Path: uart1/uart_senduu/STATE_FSM_FFd3 to uart1/uart_senduu/dlycnt_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.626   1.066  uart1/uart_senduu/dlycnt_4 (uart1/uart_senduu/dlycnt_4)
-     LUT2_L:I0->LO         1   0.479   0.123  uart1/uart_senduu/STATE_FSM_FFd1-In1_SW0 (N16)
-     LUT4:I3->O            9   0.479   0.978  uart1/uart_senduu/STATE_FSM_FFd1-In1 (uart1/uart_senduu/dlycnt_and0000)
-     LUT4:I3->O            1   0.479   0.740  uart1/uart_senduu/dlycnt_mux0000<1>_SW1 (N24)
-     LUT4:I2->O            1   0.479   0.000  uart1/uart_senduu/dlycnt_mux0000<1> (uart1/uart_senduu/dlycnt_mux0000<1>)
+     FDC:C->Q             14   0.626   1.179  uart1/uart_senduu/STATE_FSM_FFd3 (uart1/uart_senduu/STATE_FSM_FFd3)
+     LUT4:I1->O            3   0.479   0.830  uart1/uart_senduu/dlycnt_mux0000<3>11 (uart1/uart_senduu/N9)
+     LUT4:I2->O            1   0.479   0.704  uart1/uart_senduu/dlycnt_mux0000<1>44 (uart1/uart_senduu/dlycnt_mux0000<1>44)
+     LUT4:I3->O            1   0.479   0.000  uart1/uart_senduu/dlycnt_mux0000<1>48 (uart1/uart_senduu/dlycnt_mux0000<1>)
      FDC:D                     0.176          uart1/uart_senduu/dlycnt_3
     ----------------------------------------
-    Total                      5.625ns (2.718ns logic, 2.907ns route)
-                                       (48.3% logic, 51.7% route)
+    Total                      4.952ns (2.239ns logic, 2.713ns route)
+                                       (45.2% logic, 54.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'div_baud1/clkdiv_3'
-  Clock period: 4.262ns (frequency: 234.648MHz)
-  Total number of paths / destination ports: 21 / 6
+  Clock period: 5.690ns (frequency: 175.762MHz)
+  Total number of paths / destination ports: 126 / 14
 -------------------------------------------------------------------------
-Delay:               4.262ns (Levels of Logic = 2)
+Delay:               5.690ns (Levels of Logic = 4)
   Source:            uart1/uart_senduu/sendbit_cnt_1 (FF)
-  Destination:       uart1/uart_senduu/shift_over (FF)
+  Destination:       uart1/uart_senduu/shift_reg_0 (FF)
   Source Clock:      div_baud1/clkdiv_3 rising
   Destination Clock: div_baud1/clkdiv_3 rising
 
-  Data Path: uart1/uart_senduu/sendbit_cnt_1 to uart1/uart_senduu/shift_over
+  Data Path: uart1/uart_senduu/sendbit_cnt_1 to uart1/uart_senduu/shift_reg_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              5   0.626   1.078  uart1/uart_senduu/sendbit_cnt_1 (uart1/uart_senduu/sendbit_cnt_1)
-     LUT3_L:I0->LO         1   0.479   0.395  uart1/uart_senduu/shift_over_and0000_SW0 (N10)
-     LUT4:I0->O            1   0.479   0.681  uart1/uart_senduu/shift_over_and0000 (uart1/uart_senduu/shift_over_and0000)
-     FDE:CE                    0.524          uart1/uart_senduu/shift_over
+     FDC:C->Q              8   0.626   1.216  uart1/uart_senduu/sendbit_cnt_1 (uart1/uart_senduu/sendbit_cnt_1)
+     LUT2_D:I0->O          1   0.479   0.704  uart1/uart_senduu/txd_mux0000110 (uart1/uart_senduu/N02)
+     LUT4_D:I3->O          7   0.479   0.929  uart1/uart_senduu/shift_reg_0_mux000031 (uart1/uart_senduu/N10)
+     LUT4_L:I3->LO         1   0.479   0.123  uart1/uart_senduu/shift_reg_6_mux0000_SW0 (N14)
+     LUT4:I3->O            1   0.479   0.000  uart1/uart_senduu/shift_reg_6_mux0000 (uart1/uart_senduu/shift_reg_6_mux0000)
+     FDC:D                     0.176          uart1/uart_senduu/shift_reg_6
     ----------------------------------------
-    Total                      4.262ns (2.108ns logic, 2.154ns route)
-                                       (49.5% logic, 50.5% route)
+    Total                      5.690ns (2.718ns logic, 2.972ns route)
+                                       (47.8% logic, 52.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'uart1/uart_receiveuu/clkdiv_31'
@@ -695,7 +647,7 @@ Offset:              1.572ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'div_baud1/clkdiv_3'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              6.306ns (Levels of Logic = 1)
+Offset:              6.280ns (Levels of Logic = 1)
   Source:            uart1/uart_senduu/txd (FF)
   Destination:       txd (PAD)
   Source Clock:      div_baud1/clkdiv_3 rising
@@ -704,11 +656,11 @@ Offset:              6.306ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              3   0.626   0.771  uart1/uart_senduu/txd (uart1/uart_senduu/txd)
+     FDP:C->Q              2   0.626   0.745  uart1/uart_senduu/txd (uart1/uart_senduu/txd)
      OBUF:I->O                 4.909          txd_OBUF (txd)
     ----------------------------------------
-    Total                      6.306ns (5.535ns logic, 0.771ns route)
-                                       (87.8% logic, 12.2% route)
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'div_1_8m1/clk_out1'
@@ -733,7 +685,7 @@ Offset:              6.280ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'uart1/uart_receiveuu/clkdiv_31'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              6.216ns (Levels of Logic = 1)
+Offset:              6.280ns (Levels of Logic = 1)
   Source:            uart1/uart_receiveuu/data_reg_7 (FF)
   Destination:       dout<7> (PAD)
   Source Clock:      uart1/uart_receiveuu/clkdiv_31 rising
@@ -742,23 +694,23 @@ Offset:              6.216ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             1   0.626   0.681  uart1/uart_receiveuu/data_reg_7 (uart1/uart_receiveuu/data_reg_7)
+     FDCE:C->Q             2   0.626   0.745  uart1/uart_receiveuu/data_reg_7 (uart1/uart_receiveuu/data_reg_7)
      OBUF:I->O                 4.909          dout_7_OBUF (dout<7>)
     ----------------------------------------
-    Total                      6.216ns (5.535ns logic, 0.681ns route)
-                                       (89.0% logic, 11.0% route)
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.00 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.50 secs
  
 --> 
 
-Total memory usage is 258220 kilobytes
+Total memory usage is 259500 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   49 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 
